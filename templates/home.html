@@ -1,7 +1,9 @@
-{% extends "layout.html" %}
-{% block content %}
+{% extends "layout.html" %} {% block content %}
+<script type="text/javascript" src={{cdn_js | safe }}></script>
 <div class="home">
-    <h1>My homepage</h1>
-    <p>This is a test website</p>
+  <h1>Tesla Stock Information</h1>
+  <p>This is a test website</p>
 </div>
+{{bokeh_tsla | safe}}
+{{div_tsla | safe}}
 {% endblock %}
