@@ -31,8 +31,7 @@ def home():
     df['Height'] = abs(df.Close - df.Open)
 
     p = figure(x_axis_type='datetime', width=1000,
-               height=300, sizing_mode='scale_width')
-    p.title.text = "Tesla Stock Information for 2019"
+               height=300, sizing_mode='scale_width', title='Tesla Stock Prices 2019')
     p.grid.grid_line_alpha = 0.25
 
     p.segment(df.index, df.High, df.index, df.Low, color='black')
